@@ -90,6 +90,11 @@ class genusActions extends sfActions
     $request->checkCSRFProtection();
 
     $this->forward404Unless($genus = Doctrine::getTable('Genus')->find($request->getParameter('id')), sprintf('Object genus does not exist (%s).', $request->getParameter('id')));
+    $notes = Doctrine::getTable('GenusNote')->createQuery('n')->where('n.genus_id = ?',$genus->getid())->execute();
+    if ($notes) {
+        $notes->delete();
+    }
+
     $genus->delete();
 
     $this->redirect('genus/list');

@@ -75,6 +75,9 @@ SubFamily:
     name:
       type: string(255)
       notnull: true
+    description:
+      type: string(2147483647)
+      notnull: false
     created_at: date(25)
     updated_at: date(25)
 

@@ -1,4 +1,4 @@
-<h1>Edit Genus</h1>
+<h1 class="title">Edit Genus</h1>
 <?php if ($sf_user->isAuthenticated()): ?>
     <?php foreach ($user as $us):?>
         <?php if ($us->getusername() == $sf_user->getusername()): ?>

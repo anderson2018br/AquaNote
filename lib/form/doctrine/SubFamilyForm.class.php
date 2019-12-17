@@ -11,5 +11,11 @@ class SubFamilyForm extends BaseSubFamilyForm
 {
   public function configure()
   {
+      $this->widgetSchema['created_at'] = new sfWidgetFormInputHidden();
+      $this->widgetSchema['updated_at'] = new sfWidgetFormInputHidden();
+      $this->setDefaults(array(
+          'created_at' => date('Y-m-d'),
+          'updated_at' => date('Y-m-d')
+      ));
   }
 }

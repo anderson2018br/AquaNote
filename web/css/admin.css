@@ -178,3 +178,6 @@ menu {
 .img-circle {
     border-radius: 50%;
 }
+.actions-align {
+    text-align-last: end;
+}
