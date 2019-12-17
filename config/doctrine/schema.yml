@@ -1,0 +1,71 @@
+Genus:
+  tableName: genus
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    name:
+      type: string(255)
+      notnull: true
+    sub_family_id:
+      type: integer(8)
+      notnull: true
+    user_id:
+      type: int
+      notnull: true
+    species_count:
+      type: integer(8)
+      notnull: true
+    is_published:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    first_discovered_at:
+      type: date(25)
+      notnull: true
+    fun_fact: string(2147483647)
+    created_at: date(25)
+    updated_at: date(25)
+  relations:
+    SubFamily:
+      local: sub_family_id
+      foreign: id
+      type: one
+    sfGuardUser:
+      local: user_id
+      foreign: id
+      type: one
+
+GenusNote:
+  tableName: genus_note
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    genus_id:
+      type: integer(8)
+      notnull: true
+    username: string(255)
+    user_avatar_filename: string(255)
+    note: string(2147483647)
+    created_at: date(25)
+    updated_at: date(25)
+  relations:
+    Genus:
+      local: genus_id
+      foreign: id
+      type: one
+SubFamily:
+  tableName: sub_family
+  columns:
+    id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    name:
+      type: string(255)
+      notnull: true
+    created_at: date(25)
+    updated_at: date(25)

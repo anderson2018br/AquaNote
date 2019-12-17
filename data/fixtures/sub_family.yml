@@ -1,0 +1,57 @@
+SubFamily:
+  sub_family_100:
+    name: Octopus
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_101:
+    name: Balena
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_102:
+    name: Orcinus
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_103:
+    name: Hippocampus
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_104:
+    name: Asterias
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_105:
+    name: Amphiprion
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_106:
+    name: Carcharodon
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_107:
+    name: Aurelia
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_108:
+    name: Cucumaria
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_109:
+    name: Balistoides
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_110:
+    name: Paralithodes
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_111:
+    name: Chelonia
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_112:
+    name: Trichechus
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+  sub_family_113:
+    name: Eumetopias
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'

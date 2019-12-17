@@ -1,0 +1,26 @@
+list:
+  url: /genus/list
+  param: { module: genus, action: list }
+created_note:
+  url: /genus.:sf_format
+  class: sfDoctrineRoute
+  options: { model: Genus, type: object }
+  param: { module: genus, action: createNotes, sf_format: html }
+  requirements: { sf_method: post }
+genus_note:
+  class: sfDoctrineRouteCollection
+  options: { model: GenusNote }
+genus:
+  class: sfDoctrineRouteCollection
+  options: { model: Genus }
+# default rules
+homepage:
+  url:   /
+  param: { module: genus, action: index }
+
+#default_index:
+#  url:   /:module
+#  param: { action: index }
+#
+#default:
+#  url:   /:module/:action/*

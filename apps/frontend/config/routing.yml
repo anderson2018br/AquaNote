@@ -1,0 +1,17 @@
+genus:
+  class: sfDoctrineRouteCollection
+  options: { model: Genus }
+list:
+  url: /genus/list
+  param: { module: genus, action: list }
+# default rules
+homepage:
+  url:   /
+  param: { module: genus, action: index }
+
+#default_index:
+#  url:   /:module
+#  param: { action: index }
+#
+#default:
+#  url:   /:module/:action/*

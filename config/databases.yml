@@ -1,0 +1,7 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'mysql:host=192.168.104.250;dbname=teste_jobeet'
+      username: devuser
+      password: dev!123user

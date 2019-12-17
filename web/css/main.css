@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+header {
+    background-color: #81B9BA;
+    margin: 0;
+    padding-bottom: 10px;
+    display: inline-block;
+    text-decoration: none;
+    position: fixed;
+    z-index: 1;
+}
+
+.main-text {
+    padding-bottom: 20px;
+    border-bottom: 1px solid ;
+}
+.aqua-logo {
+    width: 50px;
+    margin-top: -15px;
+    display: inline-block;
+}
+.aqua-text {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    line-height: 2;
+    margin-bottom: -25px;
+}
+
+menu a, menu ul {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+
+}
+menu a:hover, menu ul:hover {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+.menu-size menu {
+    width: 300px;
+    transition: width .3s linear;
+}
+menu>ul>li:hover {
+    background-color: #99d5d6;
+}
+menu>ul>li {
+    line-height: 2.5;
+}
+menu ul {
+    padding: 0;
+}
+.menu-item a{
+    padding-left: 100px;
+    font-size: 20px;
+    position: fixed;
+    overflow: hidden;
+    text-decoration: none;
+}
+.f {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.title {
+    font-family: 'Inconsolata', monospace;
+}
+.footer-text {
+    color: #3a3a3a;
+}
+menu {
+    position: fixed;
+    overflow: hidden;
+    top: 77px;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    margin: 0;
+    background-color: #81B9BA;
+    z-index: 1;
+    padding: 15px 0;
+    border-top: 1px solid #99d5d6;
+    border-left: 3px solid #81B9BA;
+    transform: translateX(0px);
+    transition: transform, width .3s linear;
+}
+
+.menu-activate menu{
+    transform: translateX(0);
+    transition: transform .3s linear;
+}
+
+.menu-size main, .menu-size footer {
+    transform: translateX(300px);
+    transition: transform .3s linear;
+}
+
+header, main, footer {
+    transform: translateX(0px);
+    transition: transform .3s linear;
+}
+
+.menu-item {
+    border-bottom: 1px solid #99d5d6;
+    padding-bottom: 5px;
+}
+
+main {
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+.pagination {
+    float: right;
+    color: darkblue;
+    text-shadow: 2px 2px 2px aqua;
+}
+.pagination a {
+    margin-right: 5px;
+}
+
+.pagination-text {
+    margin-left: 10px;
+}
+
+.pagination-description {
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 5px 5px 5px aqua;
+    font-weight: bold;
+}
+.date {
+    width: max-content;
+}
+.btn-genus {
+    background-color: #81B9BA;
+    border-color: #81B9BA;
+}
+.date {
+    display: inline-flex;
+    width: min-content;
+}
+.pager {
+    float: right;
+}
+.btn-new {
+    float: right;
+    margin-top: -50px;
+}
+
+.actions {
+    color: black;
+    text-decoration: none;
+
+}
+.img-circle {
+    border-radius: 50%;
+}
+.js-add-note {
+    overflow: hidden;
+    text-align: -webkit-center;
+    height: 0;
+    transition: height .3s linear;
+}
+
+.js-note-box {
+    height: 250px;
+    transition: height .3s linear;
+}
+
+.search {
+    width: max-content;
+    float: right;
+    display: grid;
+    margin-top: -70px;
+}
+
+@media (max-width: 576px) {
+    .search {
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+    # Be sure to only have this line once in your configuration
+    NameVirtualHost 127.0.0.1:80
+
+    # This is the configuration for jobeet
+    Listen 127.0.0.1:80
+
+    <VirtualHost 127.0.0.1:80>
+      ServerName jobeet.localhost
+      DocumentRoot "/home/dev03/sfprojects/jobeet/web"
+      DirectoryIndex index.php
+      <Directory "/home/dev03/sfprojects/jobeet/web">
+        AllowOverride All
+        Allow from All
+      </Directory>
+
+      Alias /sf "/home/dev03/sfprojects/jobeet/lib/vendor/symfony/data/web/sf"
+      <Directory "/home/dev03/sfprojects/jobeet/lib/vendor/symfony/data/web/sf">
+        AllowOverride All
+        Allow from All
+      </Directory>
+    </VirtualHost>
