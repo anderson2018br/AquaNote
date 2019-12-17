@@ -3,8 +3,10 @@
     <tr>
         <th>User:</th>
         <td>
+            <?php foreach ($avatars as $avatar):?>
             <img style="border-radius: 50%; width: 27px;" src="/images/<?php echo $avatar->getfile_name()?>" alt="User Avatar" title="User Avatar">
             <?php echo $user->getusername() ?>
+            <?php endforeach; ?>
         </td>
     </tr>
     <tr>

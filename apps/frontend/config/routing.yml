@@ -1,3 +1,6 @@
+user:
+  class: sfDoctrineRouteCollection
+  options: { model: sfGuardUser }
 genus:
   class: sfDoctrineRouteCollection
   options: { model: Genus }

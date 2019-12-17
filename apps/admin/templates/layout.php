@@ -45,6 +45,10 @@
             <a style="padding-left: 105px" href="<?php echo url_for('genus_note') ?>">Notes</a>
         </li>
         <li class="menu-item">
+            <span class="fa f fa-user">&nbsp;</span>
+            <a style="padding-left: 105px" href="<?php echo url_for('user')?>">Users</a>
+        </li>
+        <li class="menu-item">
             <span class="fa f fa-door-closed">&nbsp;</span>
             <a href="<?php echo url_for('sf_guard_signout') ?>">Logout</a>
         </li>
@@ -62,6 +66,7 @@
     <a class="footerAnchor" href="<?php echo url_for('list') ?>"><span style="color: black!important;" class="fa f fa-fish">&nbsp;</span>Genus</a>
     <a class="footerAnchor" href="<?php echo url_for('sub_family') ?>"><span style="color: black!important;    margin-left: 35px;" class="fa f fa-water">&nbsp;</span>SubFamily</a>
     <a class="footerAnchor" href="<?php echo url_for('genus_note') ?>"><span style="color: black!important;" class="fa f fa-book">&nbsp;</span>Notes</a>
+    <a class="footerAnchor" href="<?php echo url_for('user')?>"><span style="color: black!important;" class="fa f fa-user">&nbsp;</span>Users</a>
     <a class="footerAnchor" href="<?php echo url_for('sf_guard_signout') ?>"><span class="fa f fa-door-closed" style="color: black!important;">&nbsp;</span>Logout</a>
 </footer>
 <!--<footer class="footer" style="background-color: black!important;">-->

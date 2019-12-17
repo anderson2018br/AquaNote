@@ -3,7 +3,7 @@ Genus:
   genus_<?php echo $i ?>:
     name: genus_<?php echo $i."\n";?>
     SubFamily: sub_family_<?php $j = $i ;if($j < 114)echo $j."\n"; else echo "104\n"; ?>
-    sfGuardUser: user_101
+    sfGuardUser: <?php if($i%2 == 0) echo user_101."\n"; else echo user_102."\n"; ?>
     species_count: <?php echo $i."\n" ?>
     is_published: 1
     first_discovered_at: '1999-10-10'

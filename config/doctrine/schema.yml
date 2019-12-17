@@ -48,7 +48,6 @@ GenusNote:
       type: integer(8)
       notnull: true
     user_id: integer(4)
-    user_avatar_id: integer(4)
     note: string(2147483647)
     created_at: date(25)
     updated_at: date(25)
@@ -59,10 +58,6 @@ GenusNote:
       type: one
     sfGuardUser:
       local: user_id
-      foreign: id
-      type: one
-    UserAvatar:
-      local: user_avatar_id
       foreign: id
       type: one
 SubFamily:

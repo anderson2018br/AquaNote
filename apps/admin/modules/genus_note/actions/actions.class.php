@@ -31,7 +31,7 @@ class genus_noteActions extends sfActions
     $this->genus_note = Doctrine::getTable('GenusNote')->find($request->getParameter('id'));
     $this->genus = Doctrine::getTable('Genus')->find($this->genus_note->getgenus_id());
     $this->user = Doctrine::getTable('sfGuardUser')->find($this->genus_note->getuser_id());
-    $this->avatar = Doctrine::getTable('UserAvatar')->find($this->genus_note->getuser_avatar_id());
+    $this->avatars = Doctrine::getTable('UserAvatar')->createQuery('u')->where('u.user_id = ?', $this->user->getid())->execute();
     $this->forward404Unless($this->genus_note);
   }
 

@@ -15,7 +15,6 @@ class GenusNoteForm extends BaseGenusNoteForm
       $this->widgetSchema['created_at'] = new sfWidgetFormInputHidden();
       $this->widgetSchema['genus_id'] = new sfWidgetFormInputHidden();
       $this->widgetSchema['user_id'] = new sfWidgetFormInputHidden();
-      $this->widgetSchema['user_avatar_id'] = new sfWidgetFormInputHidden();
 
       $this->setDefaults(array(
          'updated_at' => date('m-d-Y'),

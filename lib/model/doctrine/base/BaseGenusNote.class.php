@@ -11,7 +11,6 @@ abstract class BaseGenusNote extends sfDoctrineRecord
     $this->hasColumn('id', 'integer', 8, array('type' => 'integer', 'primary' => true, 'autoincrement' => true, 'length' => '8'));
     $this->hasColumn('genus_id', 'integer', 8, array('type' => 'integer', 'notnull' => true, 'length' => '8'));
     $this->hasColumn('user_id', 'integer', 4, array('type' => 'integer', 'length' => '4'));
-    $this->hasColumn('user_avatar_id', 'integer', 4, array('type' => 'integer', 'length' => '4'));
     $this->hasColumn('note', 'string', 2147483647, array('type' => 'string', 'length' => '2147483647'));
     $this->hasColumn('created_at', 'date', 25, array('type' => 'date', 'length' => '25'));
     $this->hasColumn('updated_at', 'date', 25, array('type' => 'date', 'length' => '25'));
@@ -24,8 +23,5 @@ abstract class BaseGenusNote extends sfDoctrineRecord
 
     $this->hasOne('sfGuardUser', array('local' => 'user_id',
                                        'foreign' => 'id'));
-
-    $this->hasOne('UserAvatar', array('local' => 'user_avatar_id',
-                                      'foreign' => 'id'));
   }
 }

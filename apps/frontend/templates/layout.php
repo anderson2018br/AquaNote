@@ -20,7 +20,10 @@
                 Logout
             </a>
         <?php else: ?>
-            <a href="<?php echo url_for('sf_guard_signin') ?>" style="float: right; margin-top: 25px;" class="btn btn-sm btn-light">
+            <a href="<?php echo url_for('user_new') ?>" style="float: right; margin-top: 25px;" class="btn btn-sm btn-light">
+                SignIn
+            </a>
+            <a href="<?php echo url_for('sf_guard_signin') ?>" style="float: right; margin-top: 25px; margin-right: 5px" class="btn btn-sm btn-light">
                 Login
             </a>
         <?php endif; ?>

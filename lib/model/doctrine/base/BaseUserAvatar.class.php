@@ -17,8 +17,5 @@ abstract class BaseUserAvatar extends sfDoctrineRecord
   {
     $this->hasOne('sfGuardUser', array('local' => 'user_id',
                                        'foreign' => 'id'));
-
-    $this->hasMany('GenusNote', array('local' => 'id',
-                                      'foreign' => 'user_avatar_id'));
   }
 }

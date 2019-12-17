@@ -23,4 +23,5 @@
 <script>
     $('#genus_note_user_avatar_filename').addClass('form-control');
     $('#genus_note_note').addClass('form-control');
+
 </script>

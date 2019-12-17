@@ -18,10 +18,12 @@
     <tr>
         <?php $genu = $genus->find($genus_note->getgenus_id()) ?>
         <?php $user = $users->find($genus_note->getuser_id()) ?>
-        <?php $avatar = $avatars->find($genus_note->getuser_avatar_id()) ?>
-        <td style="vertical-align: middle;"><img style="border-radius: 50%; width: 27px;" src="/images/<?php echo $avatar->getfile_name() ?>" alt="User Avatar" title="User Avatar"/>
+        <?php $avatar = $avatars->createQuery('a')->where('a.user_id = ?', $genus_note->getuser_id())->execute() ?>
+        <?php foreach ($avatar as $ava): ?>
+        <td style="vertical-align: middle;"><img style="border-radius: 50%; width: 27px;" src="/images/<?php echo $ava->getfile_name() ?>" alt="User Avatar" title="User Avatar"/>
             <?php echo $user->getusername() ?>
         </td>
+        <?php endforeach; ?>
         <td style="vertical-align: middle;"><?php echo $genu->getname() ?></td>
         <td>
             <textarea style="background-color: #ffffff!important; border: 0!important;" class="form-control" readonly><?php echo $genus_note->getnote()?></textarea>
