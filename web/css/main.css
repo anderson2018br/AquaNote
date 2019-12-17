@@ -162,7 +162,7 @@ main {
 }
 
 .js-note-box {
-    height: 250px;
+    height: 260px;
     transition: height .3s linear;
 }
 

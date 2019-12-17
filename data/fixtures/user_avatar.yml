@@ -1,0 +1,7 @@
+UserAvatar:
+  user_avatar_1:
+    file_name: leanna.jpeg
+    sfGuardUser: user_101
+  user_avatar_2:
+    file_name: ryan.jpeg
+    sfGuardUser: user_102

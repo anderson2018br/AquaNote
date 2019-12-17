@@ -2,7 +2,7 @@ list:
   url: /genus/list
   param: { module: genus, action: list }
 created_note:
-  url: /genus.:sf_format
+  url: /genus/notes.:sf_format
   class: sfDoctrineRoute
   options: { model: Genus, type: object }
   param: { module: genus, action: createNotes, sf_format: html }

@@ -6,7 +6,8 @@ CREATE TABLE sf_guard_user_permission (user_id INT, permission_id INT, created_a
 CREATE TABLE sf_guard_group (id INT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME, updated_at DATETIME, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_permission (id INT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME, updated_at DATETIME, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_remember_key (id INT AUTO_INCREMENT, user_id INT, remember_key VARCHAR(32), ip_address VARCHAR(50), created_at DATETIME, updated_at DATETIME, INDEX user_id_idx (user_id), PRIMARY KEY(id, ip_address)) ENGINE = INNODB;
-CREATE TABLE genus_note (id BIGINT AUTO_INCREMENT, genus_id BIGINT NOT NULL, username VARCHAR(255), user_avatar_filename VARCHAR(255), note TEXT, created_at DATE, updated_at DATE, INDEX genus_id_idx (genus_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE user_avatar (id INT AUTO_INCREMENT, file_name VARCHAR(255), user_id INT NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE genus_note (id BIGINT AUTO_INCREMENT, genus_id BIGINT NOT NULL, user_id INT, user_avatar_id INT, note TEXT, created_at DATE, updated_at DATE, INDEX genus_id_idx (genus_id), INDEX user_id_idx (user_id), INDEX user_avatar_id_idx (user_avatar_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE genus (id BIGINT AUTO_INCREMENT, name VARCHAR(255) NOT NULL, sub_family_id BIGINT NOT NULL, user_id INT NOT NULL, species_count BIGINT NOT NULL, is_published TINYINT DEFAULT '1' NOT NULL, first_discovered_at DATE NOT NULL, fun_fact TEXT, created_at DATE, updated_at DATE, INDEX sub_family_id_idx (sub_family_id), INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 ALTER TABLE sf_guard_user_group ADD FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_user_group ADD FOREIGN KEY (group_id) REFERENCES sf_guard_group(id) ON DELETE CASCADE;
@@ -15,6 +16,9 @@ ALTER TABLE sf_guard_group_permission ADD FOREIGN KEY (group_id) REFERENCES sf_g
 ALTER TABLE sf_guard_user_permission ADD FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_user_permission ADD FOREIGN KEY (permission_id) REFERENCES sf_guard_permission(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_remember_key ADD FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
+ALTER TABLE user_avatar ADD FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
+ALTER TABLE genus_note ADD FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
+ALTER TABLE genus_note ADD FOREIGN KEY (user_avatar_id) REFERENCES user_avatar(id);
 ALTER TABLE genus_note ADD FOREIGN KEY (genus_id) REFERENCES genus(id);
 ALTER TABLE genus ADD FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE genus ADD FOREIGN KEY (sub_family_id) REFERENCES sub_family(id);

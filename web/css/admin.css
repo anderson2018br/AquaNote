@@ -162,10 +162,19 @@ menu {
 
 /*Note Box*/
 .js-note-box {
-    height: 250px;
+    height: 260px;
     transition: height .3s linear;
 }
 .data {
     width: max-content;
     display: inline-table;
+}
+
+.form-notes {
+    display: inline-grid;
+    margin-bottom: 10px;
+}
+
+.img-circle {
+    border-radius: 50%;
 }

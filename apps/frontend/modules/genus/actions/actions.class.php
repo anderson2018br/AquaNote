@@ -34,6 +34,7 @@ class genusActions extends sfActions
         $this->genus = Doctrine::getTable('Genus')->find($request->getParameter('id'));
         $this->sub_family = Doctrine::getTable('SubFamily')->find($this->genus->getsub_family_id());
         $this->user = Doctrine::getTable('sfGuardUser')->find($this->genus->getuser_id());
+        $this->users = Doctrine::getTable('sfGuardUser')->findAll();
         $this->forward404Unless($this->genus);
 
         $this->form = new GenusNoteForm();

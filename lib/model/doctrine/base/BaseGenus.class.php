@@ -11,7 +11,7 @@ abstract class BaseGenus extends sfDoctrineRecord
     $this->hasColumn('id', 'integer', 8, array('type' => 'integer', 'primary' => true, 'autoincrement' => true, 'length' => '8'));
     $this->hasColumn('name', 'string', 255, array('type' => 'string', 'notnull' => true, 'length' => '255'));
     $this->hasColumn('sub_family_id', 'integer', 8, array('type' => 'integer', 'notnull' => true, 'length' => '8'));
-    $this->hasColumn('user_id', 'int', null, array('type' => 'int', 'notnull' => true));
+    $this->hasColumn('user_id', 'integer', 4, array('type' => 'integer', 'notnull' => true, 'length' => '4'));
     $this->hasColumn('species_count', 'integer', 8, array('type' => 'integer', 'notnull' => true, 'length' => '8'));
     $this->hasColumn('is_published', 'integer', 1, array('type' => 'integer', 'default' => '1', 'notnull' => true, 'length' => '1'));
     $this->hasColumn('first_discovered_at', 'date', 25, array('type' => 'date', 'notnull' => true, 'length' => '25'));

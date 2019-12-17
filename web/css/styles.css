@@ -88,7 +88,14 @@ body {
     margin: 0 auto;
     background-color: #81B9BA;
 }
+.form-notes {
+    display: inline-grid;
+    margin-bottom: 10px;
+}
 
+.img-circle {
+    border-radius: 50%;
+}
 .logo-icon {
     height: 50px;
     width: auto;

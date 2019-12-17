@@ -1,11 +1,11 @@
-#GenusNote:
-#<?php for ($i = 100; $i <= 200; $i++): ?>
-#  note_<?php echo $i ?>:
-#    username: username_<?php echo $i."\n" ?>
-#    user_avatar_filename: <?php if($i%2 == 0) echo "leanna.jpeg\n"; else echo "ryan.jpeg\n"; ?>
-#    note: fgdgfdfg_<?php echo $i."\n" ?>
-#    created_at: '2019-10-10'
-#    updated_at: '2019-10-10'
-#    Genus: genus_<?php echo $i."\n" ?>
-#<?php endfor; ?>
-#
+GenusNote:
+<?php for ($i = 100; $i <= 200; $i++): ?>
+  note_<?php echo $i ?>:
+    sfGuardUser: <?php if($i%2 == 0) echo user_101."\n"; else echo user_102."\n"; ?>
+    UserAvatar: <?php if($i%2 == 0) echo user_avatar_1."\n"; else echo user_avatar_2."\n"; ?>
+    note: fgdgfdfg_<?php echo $i."\n" ?>
+    created_at: '2019-10-10'
+    updated_at: '2019-10-10'
+    Genus: genus_<?php echo $i."\n" ?>
+<?php endfor; ?>
+

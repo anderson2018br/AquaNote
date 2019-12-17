@@ -43,6 +43,12 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
     $this->hasMany('Genus', array('local' => 'id',
                                   'foreign' => 'user_id'));
 
+    $this->hasMany('GenusNote', array('local' => 'id',
+                                      'foreign' => 'user_id'));
+
+    $this->hasMany('UserAvatar', array('local' => 'id',
+                                       'foreign' => 'user_id'));
+
     $timestampable0 = new Doctrine_Template_Timestampable();
     $this->actAs($timestampable0);
   }

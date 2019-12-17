@@ -38,8 +38,9 @@ class genusActions extends sfActions
     $this->genus = Doctrine::getTable('Genus')->find($request->getParameter('id'));
     $this->sub_family = Doctrine::getTable('SubFamily')->find($this->genus->getsub_family_id());
     $this->user = Doctrine::getTable('sfGuardUser')->find($this->genus->getuser_id());
-    $this->forward404Unless($this->genus);
+    $this->users = Doctrine::getTable('sfGuardUser')->findAll();
 
+    $this->forward404Unless($this->genus);
     $this->form = new GenusNoteForm();
     $this->form->setDefaults(array(
        'genus_id' => $this->genus->getid(),
@@ -70,6 +71,7 @@ class genusActions extends sfActions
   {
     $this->forward404Unless($genus = Doctrine::getTable('Genus')->find($request->getParameter('id')), sprintf('Object genus does not exist (%s).', $request->getParameter('id')));
     $this->form = new GenusForm($genus);
+    $this->user = Doctrine::getTable('sfGuardUser')->findAll();
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -90,7 +92,7 @@ class genusActions extends sfActions
     $this->forward404Unless($genus = Doctrine::getTable('Genus')->find($request->getParameter('id')), sprintf('Object genus does not exist (%s).', $request->getParameter('id')));
     $genus->delete();
 
-    $this->redirect('genus/index');
+    $this->redirect('genus/list');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -100,7 +102,7 @@ class genusActions extends sfActions
     {
       $genus = $form->save();
 
-      $this->redirect('genus/edit?id='.$genus['id']);
+      $this->redirect('genus/show?id='.$genus['id']);
     }
   }
   public function executeCreateNotes(sfWebRequest $request)
@@ -121,7 +123,6 @@ class genusActions extends sfActions
       {
           $note = $form->save();
 
-          $this->redirect('genus/show?id='.$note['genus_id']);
-      }
+          $this->redirect('genus/show?id='.$note['genus_id']);      }
   }
 }

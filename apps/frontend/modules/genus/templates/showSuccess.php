@@ -1,3 +1,4 @@
+<?php if ($genus): ?>
 <h2 class="genus-name"><?php echo $genus->getname()?></h2>
 <div class="sea-creature-container">
     <div class="genus-photo"></div>
@@ -15,7 +16,13 @@
     </div>
 </div>
 <?php if ($sf_user->isAuthenticated()): ?>
-<?php $form->setDefault('username',$sf_user->getusername()) ?>
+<?php foreach ($users as $us): ?>
+    <?php if ($us->getusername() == $sf_user->getusername()): ?>
+        <?php $form->setDefault('user_id', $us->getid()) ?>
+        <?php $avatar = Doctrine::getTable('UserAvatar')->find($us->getid()) ?>
+        <?php $form->setDefault('user_avatar_id', $avatar->getid()) ?>
+    <?php endif; ?>
+<?php endforeach; ?>
 <div class="js-add-note" id="note-form">
     <h1 class="title">New Note</h1>
     <?php include_partial('form', array('form' => $form)) ?>
@@ -53,7 +60,7 @@
         $('.plus').toggleClass('fa-minus-circle');
         $('#note-form').toggleClass('js-note-box');
     });
-
+    $('form>table>tbody>tr').addClass('form-notes');
 </script>
-
+<?php endif; ?>
 

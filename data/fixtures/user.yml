@@ -2,3 +2,6 @@ sfGuardUser:
   user_101:
     username: anderson
     password: 12345
+  user_102:
+    username: anderson1
+    password: 12345
