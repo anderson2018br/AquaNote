@@ -18,11 +18,11 @@
       <td><?php echo $sub_family->getname() ?></td>
       <td><?php echo $sub_family->getdescription() ?></td>
       <td class="actions-align">
-          <a class="actions" href="<?php echo url_for('sub_family_show',$sub_family)?>">
-                <span class="actions fa fa-eye">&nbsp;</span>
+          <a style="text-decoration: none;" class="actions" href="<?php echo url_for('sub_family_show',$sub_family)?>">
+                <span class="fa fa-eye">&nbsp;</span>
           </a> |
-          <a class="actions" href="<?php echo url_for('sub_family_edit',$sub_family)?>">
-              <span class="actions fa fa-pen">&nbsp;</span>
+          <a style="text-decoration: none;" class="actions" href="<?php echo url_for('sub_family_edit',$sub_family)?>">
+              <span  class=" fa fa-pen">&nbsp;</span>
           </a> |
           &nbsp;<?php echo link_to('<span class="actions delete fa fa-trash-alt">&nbsp;</span>', 'sub_family/delete?id='.$sub_family->getid(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
       </td>
@@ -44,7 +44,7 @@
         <?php if ($page == $pager->getPage()):?>
             <?php echo $page ?>
         <?php else: ?>
-            <a href="<?php echo url_for('sub_family/index')?>?page=<?php echo $page ?>">
+            <a class="pagination-text" href="<?php echo url_for('sub_family/index')?>?page=<?php echo $page ?>">
                 <?php echo $page ?>
             </a>
         <?php endif; ?>

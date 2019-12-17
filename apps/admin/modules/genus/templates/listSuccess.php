@@ -49,7 +49,7 @@
         <?php if ($page == $pager->getPage()): ?>
             <?php echo $page ?>
         <?php else: ?>
-            <a href="<?php echo url_for('genus/list')?>?page=<?php echo $page ?>">
+            <a class="pagination-text" href="<?php echo url_for('genus/list')?>?page=<?php echo $page ?>">
                 <?php echo $page ?>
             </a>
         <?php endif; ?>

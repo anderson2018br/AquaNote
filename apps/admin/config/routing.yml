@@ -1,3 +1,6 @@
+genus_note:
+  class: sfDoctrineRouteCollection
+  options: { model: GenusNote }
 sub_family:
   class: sfDoctrineRouteCollection
   options: { model: SubFamily }
