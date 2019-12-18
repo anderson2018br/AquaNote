@@ -15,9 +15,9 @@
   <tbody id="myTable">
     <?php foreach ($sub_family_list as $sub_family): ?>
     <tr>
-      <td><?php echo $sub_family->getname() ?></td>
-      <td><?php echo $sub_family->getdescription() ?></td>
-      <td class="actions-align">
+      <td style="vertical-align: middle;"><?php echo $sub_family->getname() ?></td>
+      <td><textarea class="form-control" style="border: 0;  background-color: #FFFFFF;" readonly><?php echo $sub_family->getdescription() ?></textarea></td>
+      <td class="actions-align" style="vertical-align: middle;">
           <a style="text-decoration: none;" class="actions" href="<?php echo url_for('sub_family_show',$sub_family)?>">
                 <span class="fa fa-eye">&nbsp;</span>
           </a> |

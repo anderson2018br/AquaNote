@@ -4,7 +4,7 @@
     <input type="text" id="search" class="form-control"/>
 </label>
 </div>
-<table class="table table-striped" id="table-list-genus">
+<table class="table table-striped display" id="table-list-genus">
     <thead>
     <tr>
         <th>Name</th>

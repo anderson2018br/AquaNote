@@ -16,7 +16,7 @@ class BasesfGuardUserForm extends BaseFormDoctrine
       'username'         => new sfWidgetFormInput(),
       'algorithm'        => new sfWidgetFormInput(),
       'salt'             => new sfWidgetFormInput(),
-      'password'         => new sfWidgetFormInput(),
+      'password'         => new sfWidgetFormInputPassword(),
       'is_active'        => new sfWidgetFormInputCheckbox(),
       'is_super_admin'   => new sfWidgetFormInputCheckbox(),
       'last_login'       => new sfWidgetFormDateTime(),

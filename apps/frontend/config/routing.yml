@@ -1,3 +1,9 @@
+genus_note:
+  class: sfDoctrineRouteCollection
+  options: { model: sfGuardUser }
+sub_family:
+  class: sfDoctrineRouteCollection
+  options: { model: SubFamily }
 user:
   class: sfDoctrineRouteCollection
   options: { model: sfGuardUser }

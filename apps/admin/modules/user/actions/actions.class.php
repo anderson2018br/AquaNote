@@ -12,9 +12,14 @@ class userActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->sf_guard_user_list = Doctrine::getTable('sfGuardUser')
-      ->createQuery('a')
-      ->execute();
+    $sf_guard_user_list = Doctrine::getTable('sfGuardUser')
+      ->createQuery('a');
+    $this->pager = new sfDoctrinePager('sfGuardUser', sfConfig::get('app_max_per_page'));
+    $this->pager->setQuery($sf_guard_user_list);
+    $this->pager->setPage($request->getParameter('page', 1));
+    $this->pager->init();
+
+    $this->sf_guard_user_list = $this->pager->getResults();
   }
 
   public function executeDelete(sfWebRequest $request)

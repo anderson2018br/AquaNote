@@ -189,7 +189,9 @@ BODY Styling
     text-transform: uppercase;
     padding-top: 10px;
 }
-
+.actions-align {
+    text-align-last: center;
+}
 .plus-btn {
     color: #fff;
     border: 1px solid #7A942E;

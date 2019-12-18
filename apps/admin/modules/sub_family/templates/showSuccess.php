@@ -5,8 +5,8 @@
       <td><?php echo $sub_family->getname() ?></td>
     </tr>
     <tr>
-        <th>Description:</th>
-        <td><?php echo $sub_family->getdescription()?></td>
+        <th style="vertical-align: middle;">Description:</th>
+        <td><textarea class="form-control" style="background-color: #FFFFFF; border: 0;" readonly><?php echo $sub_family->getdescription()?></textarea></td>
     </tr>
     <tr>
       <th>Created at:</th>

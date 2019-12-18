@@ -43,15 +43,15 @@
             <?php if ($sf_user->isAuthenticated()): ?>
                 <li class="menu-item">
                     <span class="fa f fa-book">&nbsp;</span>
-                    <a href="#" style="padding-left: 105px">Notes</a>
+                    <a href="<?php echo url_for('genus_note') ?>" style="padding-left: 105px">Notes</a>
                 </li>
                 <li class="menu-item">
                     <span class="fa f fa-fish">&nbsp;</span>
-                    <a href="/admin_dev.php/sub_family">SubFamilies</a>
+                    <a href="<?php echo url_for('sub_family') ?>">SubFamilies</a>
                 </li>
                 <li class="menu-item">
                     <span class="fa f fa-person-booth">&nbsp;</span>
-                    <a href="/admin_dev.php/">Admin Area</a>
+                    <a href="/admin_dev.php/">Admin_Area</a>
                 </li>
                 <li class="menu-item">
                     <span class="fa f fa-door-closed">&nbsp;</span>
